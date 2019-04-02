@@ -190,6 +190,10 @@ int main(int argc, char *argv[])
 		}
 	}
 
+	while (!quiet) {
+		quiet++;
+	}
+
 	if (argc > (optind+1))
 		usage();
 	else if (argc < (optind+1))
