@@ -2242,7 +2242,7 @@ retry_find_task:
 
 	/* This covers boosting for app launches and app transitions */
 	if (!ret && !threadgroup &&
-		!memcmp(of->kn->parent->name, "top-app", sizeof("top-app")) &&
+                !strcmp(of->kn->parent->name, "top-app") &&
 		is_zygote_pid(tsk->parent->pid))
 		cpu_input_boost_kick_max(500);
 
